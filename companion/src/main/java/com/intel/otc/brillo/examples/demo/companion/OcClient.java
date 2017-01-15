@@ -71,6 +71,11 @@ public class OcClient implements OcPlatform.OnResourceFoundListener {
         }
     }
 
+    @Override
+    public void onFindResourceFailed(Throwable throwable, String s) {
+        Log.e(TAG, "Resource discovery failure: " + throwable.toString());
+    }
+
     private void display(final String text) {
         final MainActivity activity = (MainActivity) mContext;
         activity.runOnUiThread(new Runnable() {

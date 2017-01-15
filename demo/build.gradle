@@ -24,6 +24,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':iotivity-base-x86-release')
+    compile 'org.iotivity:base-x86:1.2.1'
     provided 'com.google.android.things:androidthings:0.1-devpreview'
 }
