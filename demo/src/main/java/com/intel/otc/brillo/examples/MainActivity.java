@@ -4,11 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import org.iotivity.base.OcPlatform;
-import org.iotivity.base.ResourceProperty;
-
-import java.util.EnumSet;
-
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -34,27 +29,11 @@ public class MainActivity extends Activity {
         mp3Player.subscribeStateChangeNotification(lcdDisplayManager);
 
         ocServer = new OcServer(this);
-        ocBrightness = new OcResourceBrightness(
-                "/brillo/mp3player/brightness",
-                OcPlatform.DEFAULT_INTERFACE,
-                EnumSet.of(ResourceProperty.DISCOVERABLE, ResourceProperty.OBSERVABLE),
-                100, lcdDisplayManager);
-        ocColorRGB = new OcResourceColorRGB(
-                "/brillo/mp3player/rgb",
-                OcPlatform.DEFAULT_INTERFACE,
-                EnumSet.of(ResourceProperty.DISCOVERABLE, ResourceProperty.OBSERVABLE),
-                lcdDisplayManager);
-        ocMp3Player = new OcResourceMp3Player(
-                "/brillo/mp3player",
-                OcPlatform.DEFAULT_INTERFACE,
-                EnumSet.of(ResourceProperty.DISCOVERABLE, ResourceProperty.OBSERVABLE),
-                mp3Player);
+        ocBrightness = new OcResourceBrightness("/brillo/mp3player/brightness",100, lcdDisplayManager);
+        ocColorRGB = new OcResourceColorRGB("/brillo/mp3player/rgb", lcdDisplayManager);
+        ocMp3Player = new OcResourceMp3Player("/brillo/mp3player", mp3Player);
         mp3Player.subscribeStateChangeNotification(ocMp3Player);
-        ocAudioControl = new OcResourceAudioControl(
-                "/brillo/mp3player/volume",
-                OcPlatform.DEFAULT_INTERFACE,
-                EnumSet.of(ResourceProperty.DISCOVERABLE, ResourceProperty.OBSERVABLE),
-                mp3Player);
+        ocAudioControl = new OcResourceAudioControl("/brillo/mp3player/volume", mp3Player);
     }
 
     @Override
