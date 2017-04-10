@@ -6,13 +6,13 @@ This repository contains the source code of the [Android Things](https://develop
 ### Prebuilt Images
 - **MP3 Player**  
   To setup the MP3 player demo on Intel Edison Kit for Arduino, follows these [instructions](https://developer.android.com/things/hardware/edison.html) to flash the [Android Things Developer Preview image](https://developer.android.com/things/preview/download.html) to the device before installing the MP3 player APK from the Android Studio.
-    + Prebuilt Android Things Developer Preview images [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LLXo3SHhhbGtncTA), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LX054dVJNQ2dqN2c)
+    + Prebuilt Android Things Developer Preview images [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LLXo3SHhhbGtncTA), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LX054dVJNQ2dqN2c), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LVC1xek1WTXczc3M)
     + [Prebuilt IoTivity base library 1.2.1 for Android](https://drive.google.com/open?id=0B8-BcoYPJr2LTDI2Skc5cTd1VXM)  
     <sup><i>Notes on building the base library version 1.1.1 from [IoTivity](https://www.iotivity.org/) source  
         1. This [patch](https://gerrit.iotivity.org/gerrit/#/c/7595/) was required as the [Android dynamic linker expects SONAME attribute](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-runtime) presented in shared libraries since Android 6.0. This has been merged since 1.2.1 release.  
         2. This [patch](https://gerrit.iotivity.org/gerrit/#/c/10165/) will be required if the [OcDeviceInfo](https://api-docs.iotivity.org/latest-java/index.html) object will be used to register a device.</i></sup>
 
-    + MP3 player APK (Resource servers) [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LVnplS2R3d0djTXM), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LTEdQREQ0cDBaM1k)
+    + MP3 player APK (Resource servers) [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LVnplS2R3d0djTXM), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LTEdQREQ0cDBaM1k), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LczBrcF9WZHZhZU0)
     <p>
 - **Android companion app**  
     The companion app requires Android devices support API 23 or above.
