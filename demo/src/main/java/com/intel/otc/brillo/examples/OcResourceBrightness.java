@@ -45,7 +45,6 @@ public class OcResourceBrightness extends OcResourceBase {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                response.setErrorCode(SUCCESS);
                 response.setResponseResult(EntityHandlerResult.OK);
                 response.setResourceRepresentation(getOcRepresentation());
                 sendResponse(response);

@@ -103,7 +103,6 @@ abstract class OcResourceBase implements OcPlatform.EntityHandler {
         OcResourceResponse response = new OcResourceResponse();
         response.setRequestHandle(request.getRequestHandle());
         response.setResourceHandle(request.getResourceHandle());
-        response.setErrorCode(SUCCESS);
         response.setResponseResult(EntityHandlerResult.OK);
         response.setResourceRepresentation(getOcRepresentation());
         return sendResponse(response);
@@ -116,7 +115,6 @@ abstract class OcResourceBase implements OcPlatform.EntityHandler {
         setOcRepresentation(request.getResourceRepresentation());
         response.setResourceRepresentation(getOcRepresentation());
         response.setResponseResult(EntityHandlerResult.OK);
-        response.setErrorCode(SUCCESS);
         return sendResponse(response);
     }
 
@@ -127,7 +125,6 @@ abstract class OcResourceBase implements OcPlatform.EntityHandler {
         setOcRepresentation(request.getResourceRepresentation());
         response.setResourceRepresentation(getOcRepresentation());
         response.setResponseResult(EntityHandlerResult.OK);
-        response.setErrorCode(SUCCESS);
         return sendResponse(response);
     }
 

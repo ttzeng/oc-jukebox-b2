@@ -6,13 +6,13 @@ This repository contains the source code of the [Android Things](https://develop
 ### Prebuilt Images
 - **MP3 Player**  
   To setup the MP3 player demo on Intel Edison Kit for Arduino, follows these [instructions](https://developer.android.com/things/hardware/edison.html) to flash the [Android Things Developer Preview image](https://developer.android.com/things/preview/download.html) to the device before installing the MP3 player APK from the Android Studio.
-    + Prebuilt Android Things Developer Preview images [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LLXo3SHhhbGtncTA), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LX054dVJNQ2dqN2c), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LVC1xek1WTXczc3M)
-    + [Prebuilt IoTivity base library 1.2.1 for Android](https://drive.google.com/open?id=0B8-BcoYPJr2LTDI2Skc5cTd1VXM)  
+    + Prebuilt Android Things Developer Preview images [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LLXo3SHhhbGtncTA), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LX054dVJNQ2dqN2c), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LVC1xek1WTXczc3M), DP4
+    + Prebuilt IoTivity base library for Android [v1.2.1](https://drive.google.com/open?id=0B8-BcoYPJr2LTDI2Skc5cTd1VXM), [v1.3.0](https://drive.google.com/open?id=0B8-BcoYPJr2LRmRLQVVvVmVSdFk)  
     <sup><i>Notes on building the base library version 1.1.1 from [IoTivity](https://www.iotivity.org/) source  
         1. This [patch](https://gerrit.iotivity.org/gerrit/#/c/7595/) was required as the [Android dynamic linker expects SONAME attribute](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-runtime) presented in shared libraries since Android 6.0. This has been merged since 1.2.1 release.  
         2. This [patch](https://gerrit.iotivity.org/gerrit/#/c/10165/) will be required if the [OcDeviceInfo](https://api-docs.iotivity.org/latest-java/index.html) object will be used to register a device.</i></sup>
 
-    + MP3 player APK (Resource servers) [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LVnplS2R3d0djTXM), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LTEdQREQ0cDBaM1k), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LczBrcF9WZHZhZU0)
+    + MP3 player APK (Resource servers) [DP1](https://drive.google.com/open?id=0B8-BcoYPJr2LVnplS2R3d0djTXM), [DP2](https://drive.google.com/open?id=0B8-BcoYPJr2LTEdQREQ0cDBaM1k), [DP3](https://drive.google.com/open?id=0B8-BcoYPJr2LczBrcF9WZHZhZU0), [DP4](https://drive.google.com/open?id=0B8-BcoYPJr2LYllFajlLendGSlk)
     <p>
 - **Android companion app**  
     The companion app requires Android devices support API 23 or above.
@@ -23,7 +23,7 @@ This repository contains the source code of the [Android Things](https://develop
 <pre>$ git clone https://github.com/ttzeng/oc-jukebox-b2.git
 </pre>
 2. Download and install the prebuilt IoTivity base library for Android into the local maven repository with the following command.
-<pre>$ mvn install:install-file -Dfile=iotivity-base-x86-release.aar -DgroupId=org.iotivity -DartifactId=base-x86 -Dversion=1.2.1 -Dpackaging=aar
+<pre>$ mvn install:install-file -Dfile=iotivity-base-x86-release.aar -DgroupId=org.iotivity -DartifactId=base-x86 -Dversion=1.3.0 -Dpackaging=aar
 </pre>
 3. The project contains two modules, select the module <code>demo</code> or <code>companion</code> in the Project panel, and then click <b>Build</b> > <b>Make Selected Modules</b> to build the module using Gradle.
 4. For setting up the MP3 player demo on the device, insert a standard Android SD card with pre-installed MP3 titles, or copy some MP3 files to the <code>/sdcard/Music/</code> folder on the device manually with the following command.
